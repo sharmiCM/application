@@ -1,0 +1,302 @@
+/*07-03-2018 Sharmila starts */
+/*.zoomImage:hover {
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(2.5); 
+}
+
+fieldset{
+	
+  text-align: left;
+  direction: rtl;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: solid 1px green;
+
+}*/
+
+.jlDisp  {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #F1E41A;
+}
+.jlDisp th{
+
+    background-color: #ECC027;
+}
+.jlDisp td, th {
+    border: 1px solid #F1E41A;
+    text-align: left;
+    padding: 8px;
+}
+.jlDisp tr:nth-child(odd) {
+    background-color: #F4F1D3;
+}
+
+
+#jlQueue td, th {
+      border: 1px solid darkblue;
+
+}
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.next {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+ #jmsDisp  {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #F1E41A;
+}
+#jmsDisp th{
+
+    background-color: #ECC027;
+}
+#jmsDisp td, th {
+    border: 1px solid #F1E41A;
+    text-align: left;
+    padding: 8px;
+
+}
+ #jmsDispAssigned  {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #F1E41A;
+}
+#jmsDispAssigned th{
+
+    background-color: #ECC027;
+}
+#jmsDispAssigned td, th {
+    border: 1px solid #F1E41A;
+    text-align: left;
+    padding: 8px;
+
+}
+#jmsDispAssigned tr:nth-child(odd) {
+    background-color: #F4F1D3;
+}
+.commonCss{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid lightblue;	
+}
+.commonCss td {
+    border: 1px solid lightblue;
+    text-align: left;
+    padding: 8px;
+}
+.commonCss td:nth-child(even) {
+	text-align:center;
+}
+
+.commonCss td:nth-child(odd) {
+    font-weight: bold;
+}
+
+#jmsDisp tr:nth-child(odd) {
+    background-color: #F4F1D3;
+}
+ #jmsDispCart  {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #F1E41A;
+}
+#jmsDispCart th{
+
+    background-color: #ECC027;
+}
+#jmsDispCart td, th {
+    border: 1px solid #F1E41A;
+    text-align: left;
+    padding: 8px;
+
+}
+
+#jmsDispCart tr:nth-child(odd) {
+    background-color: #F4F1D3;
+}
+#jmsOpDisp th{
+
+    background-color: #ECC027;
+}
+#jmsOpDisp tr:nth-child(odd) {
+    background-color: #F4F1D3;
+}
+#jmsOpDisp  {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #F1E41A;
+}
+#jmsOpDisp td, th {
+    border: 1px solid #F1E41A;
+    text-align: left;
+    padding: 8px;
+
+}
+
+
+
+
+ #jmsDispForOpe,#jmsDispForOpeAssigned {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #F1E41A;
+}
+#jmsDispForOpe th,#jmsDispForOpeAssigned th{
+
+    background-color: #ECC027;
+}
+#jmsOpJL th,#jmsOpJLQC th,#jmsOpJLHandover th{
+background-color:#267bbd;
+border: 1px solid darkgrey;
+color:white;
+}
+#jmsDispForOpeAssigned td{
+	padding: 8px;
+}
+
+#jmsDispForOpe td, th {
+    border: 1px solid #F1E41A;
+    text-align: left;
+    padding: 8px;
+
+}
+
+#jmsDispForOpe tr:nth-child(odd), #jmsDispForOpeAssigned tr:nth-child(odd) {
+    background-color: #F4F1D3;
+}
+
+#jmsOpJL td,#jmsOpJLQC td,#jmsOpJLHandover td {
+    border: 1px solid grey;
+    text-align: left;
+    padding: 8px;
+
+}
+
+/*#jmsOpJL tr:nth-child(odd), #jmsDispForOpeAssigned tr:nth-child(odd) {
+    background-color: #F4F1D3;
+}*/
+
+#countTable th{
+
+    background-color: #BAB9C6;
+	border: 2px solid #5A5A88;
+	font-size: smaller;
+}
+#dashboard{
+/*border:2px solid darkgray;*/
+border-radius: 2px;
+width:100%;
+height:100%;
+/*background-color: gainsboro;*/
+margin-top: 3px;
+}
+.tdDiv{
+	font-size: smaller;
+	font-weight: bolder;
+	/*margin-top: -33px;*/
+    color: gray;
+	text-align: center;
+}
+
+#countTable td {
+    /*border-right: 2px solid rgb(54, 162, 235);*/
+	border: 2px solid #5A5A88;
+    text-align: left;
+    padding: 8px;
+
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #DC851F;
+    width: 25%;
+    margin-top: 90px;
+}
+
+/* The Close Button */
+.close {
+	color: orangered;
+    opacity: 1;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    margin: -15px -15px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*07-03-2018 Sharmila ends */
+
+#OperatorSelect{
+	height: 30px;
+    width: 45%;
+    border-radius: 5px;
+    background-color: #357ebd;
+    color: white;
+}
+#disspDiv label{
+	font-weight: 800;
+    font-size: 18px;
+	margin-left: 10px;
+	color: brown;
+}
+
+#centreText::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#centreText::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#centreText::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #ECC027;
+}
