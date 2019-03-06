@@ -5,7 +5,10 @@ class HomeScreen extends CI_Controller {
 	
 	
 	public function index()
-	{
-		$this->load->view('Dashboard/Home.php');//
+	{	
+		$this->template
+				->title('Dashboard','My App')
+				->build('Dashboard/dashboard');
+		//$this->load->view('Dashboard/Home.php');//
 	}
 }

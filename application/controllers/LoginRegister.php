@@ -9,9 +9,16 @@ class LoginRegister extends CI_Controller{
   }
  function index($msg = NULL)
  {
+
+  $this->template
+        ->title('Login','Login Page')      
+        ->set_layout('access')
+        ->build('access/login');
+
+
   $data['msg'] = $msg;
   $data['main_content'] = 'login_form';
-  $this->load->view('includes/template', $data); 
+  //$this->load->view('includes/template', $data); 
  } 
  function validateCredentials() {  
  
