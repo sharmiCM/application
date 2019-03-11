@@ -55,6 +55,7 @@ $(document).ready(function(){
 		}
 		*/
 	});
+	loggedInOperator();
 });
 
 function compradioClick(re){
@@ -95,7 +96,7 @@ function displayIdleOperators(){
 	modal.style.display = "block";
 	$.ajax({
 		type:'POST',
-		url:'vars1.php',	
+		url:$('.base').val()+"public/Reports/vars1.php",	
 		data:{pars:"parsing"},
 		success:function(html){
 			var c = html.split("/FREAK/");
@@ -103,7 +104,7 @@ function displayIdleOperators(){
 			var i = setInterval(function() { 
 				$.ajax({
 					type:'POST',
-					url:'vars1.php',	
+					url:$('.base').val()+"public/Reports/vars1.php",	
 					data:{pars:"parsing"},
 					success:function(html){
 						var c = html.split("/FREAK/");
@@ -922,7 +923,7 @@ function getComparitiveInformation(st,en,st1,en1,st2,last){
 			lasting=last;
 			$.ajax({
 				type:'POST',
-				url:'getComparison.php',	
+				url:$('.base').val()+"public/CapacityPlanner/getComparison.php",	
 				data:{date1:a,date2:b,date3:c,date4:d,date5:e,date6:f,date7:g,lasts:last},
 				success:function(html){
 					var cs =html.split("$");
@@ -1134,7 +1135,7 @@ var modal;
 function getPreMonVal(ret){
 	$.ajax({
 		type:'POST',
-		url:'TATExceedFiles.php',	
+		url:$('.base').val()+"public/CapacityPlanner/TATExceedFiles.php",	
 		data:{nothing:'nodata'},
 		success:function(html){
 			modal = document.getElementById('myModalMonthlyInfo');
@@ -1146,7 +1147,7 @@ function getPreMonVal(ret){
 function forPublisherSplitup(){
 	$.ajax({
 		type:'POST',
-		url:'pubSplits.php',	
+		url:$('.base').val()+"public/CapacityPlanner/pubSplits.php",	
 		data:{nothing:'nodata'},
 		success:function(html){			
 			$("#publSplit").html(html); 
@@ -1164,7 +1165,7 @@ function capacityPlanner(){
 			var b="";var c="";var d="";var e="";
 			$.ajax({
 				type:'POST',
-				url:'getComparison.php',	
+				url:$('.base').val()+"public/CapacityPlanner/getComparison.php",	
 				data:{date1:a,date2:b,date3:c,date4:d,date5:e,date6:"",date7:"",lasts:""},
 				success:function(html){
 					var cs =html.split("$")[0].split(":")[1].split("*");
@@ -1650,7 +1651,7 @@ function capacityPlanner(){
 
 $.ajax({
 		type:'POST',
-		url:'getOTD.php',	
+		url:$('.base').val()+"public/CapacityPlanner/getOTD.php",	
 		data:{nothing:'nodata'},
 		success:function(html){
 			var otdPer =html.split("*");
@@ -1748,7 +1749,7 @@ $.ajax({
 /*chart2 starts*/
 $.ajax({
 		type:'POST',
-		url:'getQuality.php',	
+		url:$('.base').val()+"public/CapacityPlanner/getQuality.php",	
 		data:{nothing:'nodata'},
 		success:function(html){
 			var qualPer =html.split("*");
@@ -1844,7 +1845,7 @@ var myConfig3 = {
 	
 	$.ajax({
 		type:'POST',
-		url:'TATExceedFiles.php',	
+		url:$('.base').val()+"public/CapacityPlanner/TATExceedFiles.php",	
 		data:{nothing:'nodata'},
 		success:function(html){
 			//var c = html.split("+");
@@ -1864,7 +1865,7 @@ var myConfig3 = {
 	$("#loadersCapacity").show();
 	$.ajax({
 			type:'POST',
-			url:'capacityCount.php',	
+			url:$('.base').val()+"public/CapacityPlanner/capacityCount.php",	
 			data:{sdate:todDate, edate:todDate,interval:'no'},
 			success:function(html){
 				var c = html.split("COUNT");
@@ -1915,7 +1916,7 @@ var myConfig3 = {
 	
 	$.ajax({
 		type:'POST',
-		url:'capacityCount.php',	
+		url:$('.base').val()+"public/CapacityPlanner/capacityCount.php",	
 		data:{sdate:$('#datepickerStartdash')[0].value, edate:$('#datepickerStartdash')[0].value+" 12:59:60 PM",interval:'yes'},
 		success:function(html){
 var myConfig = {
@@ -2189,7 +2190,7 @@ forQC="dash";
 loggedInOperator();	
 $.ajax({
 		type:'POST',
-		url:'vars10.php',	
+		url:$('.base').val()+"public/CapacityPlanner/vars10.php",	
 		data:{currentTime:""},
 		success:function(html){
 			var c = html;var doneforDayText;
@@ -2621,7 +2622,7 @@ function getSelectionText(){
 						//get the operator who are all logged in
 				$.ajax({
 					type:'POST',
-					url:'vars1.php',	
+					url:$('.base').val()+"public/Reports/vars1.php",	
 					data:{pars:"parsing"},
 					success:function(html){
 						if(forQC!="yes"){
@@ -3021,6 +3022,6 @@ alert('Alert this pages');
 }
 
 
-loggedInOperator();
+
 
 //14/03/2018 Sharmila ends - for custom alert

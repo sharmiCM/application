@@ -5,31 +5,40 @@ class LoginRegister extends CI_Controller{
  function __construct()
   {
    parent::__construct();
-    $this->load->helper(array('form', 'url'));
+    $this->load->helper(array('url'));
+	$this->load->model('login'); /* load model default which you create */
+    $this->load->library('session');
   }
- function index($msg = NULL)
+ function index()
  {
-  $data['msg'] = $msg;
-  $data['main_content'] = 'login_form';
-  $this->load->view('includes/template', $data); 
+  $this->load->view('login_form'); 
  } 
  function validateCredentials() {  
- 
+//if (isset($this->session->userdata['user'])){
   $this->load->model('login'); 
   $query = $this->login->validate();
   if($query=="Go to home page!") // if the user's credentials validated...
   {
-  // $data = array(    'EmployeeID' => $this->input->post('EmployeeID'),    'is_logged_in' => true   );
-   //$this->session->set_userdata($data);
-   redirect('/Dashboard/HomeScreen');
- 
+   //redirect('HomeScreen'); 
+   redirect('HomeScreen/capacityPlannerDash');
   }
   else // incorrect username or password
   {
-   $msg = '<p class=error>'.$query.'</p>';
-            $this->index($msg);
+    $msg = '<p class=error>'.$query.'</p>';
+	$data = array('messages' => $msg);
+	$this->session->set_userdata($data);
+    $this->load->view('login_form');
+	$this->session->unset_userdata('messages');
+   //$this->index();
   }
-
+//}
+//else{
+//	 $this->index();
+//}
+ }
+  function logout() {
+  $this->session->sess_destroy();
+  $this->load->view('login_form');
  }
   function signup()
  {
@@ -43,7 +52,7 @@ class LoginRegister extends CI_Controller{
  }
  function create_member()
  {
-  $this->load->library('form_validation');
+  $this->load->library('session');
 
   
   // field name, error message, validation rules
@@ -74,11 +83,5 @@ class LoginRegister extends CI_Controller{
   }
  
    
- }
-  function logout()
- {
-  $this->session->sess_destroy();
-  $data['main_content'] = 'login_form';
-  $this->load->view('includes/template', $data); 
  }
 }

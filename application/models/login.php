@@ -6,6 +6,7 @@ class login extends CI_Model {
 	$emp = $this->input->post('EmployeeID');
 	$query = $this->db->query("SELECT * FROM `signup` WHERE EmployeeID='".$emp."' AND password='".$this->input->post('password')."'");
 	$totalfound = $query->num_rows();
+	$data = array();
 	foreach ($query->result() as $row){
         $level =  $row->user_level;
 		$firstN =  $row->Firstname;
