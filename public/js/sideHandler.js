@@ -936,7 +936,7 @@ function getComparitiveInformation(st,en,st1,en1,st2,last){
 						var cs7 =(cs[7].split(":")[1]).split("*");
 						var cs8 =(cs[8].split(":")[1]).split("*");
 						
-						var divWeekCharts ="<div id='date1a' style='margin-left: 8px;float:left;width: 123px;'></div><div id='date1b' style='float:left;width: 126px;'></div><div id='date2a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date2b' style='float:left;width: 126px;'></div><div id='date3a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date3b' style='float:left;width: 126px;'></div><div id='date4a' style='margin-left: -19px; float:left;width: 123px;'></div><div id='date4b' style='float:left;width: 126px;'></div><div id='date5a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date5b' style='float:left;width: 126px;'></div>  <div id='date6a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date6b' style='float:left;width: 126px;'></div>  <div id='date7a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date7b' style='float:left;width: 126px;'></div></br>";
+						var divWeekCharts ="<table style='width: 100%;'><tr><td><div id='date1a' style='margin-left: 8px;float:left;width: 123px;'></div><div id='date1b' style='float:left;width: 126px;'></div></td><td><div id='date2a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date2b' style='float:left;width: 126px;'></div></td><td><div id='date3a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date3b' style='float:left;width: 126px;'></div></td><td><div id='date4a' style='margin-left: -19px; float:left;width: 123px;'></div><div id='date4b' style='float:left;width: 126px;'></div></td><td> <div id='date5a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date5b' style='float:left;width: 126px;'></div></td><td> <div id='date6a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date6b' style='float:left;width: 126px;'></div></td><td><div id='date7a' style='margin-left: -19px;float:left;width: 123px;'></div><div id='date7b' style='float:left;width: 126px;'></div></td></tr></table></br>";
 						$("#multiSlider").html(divWeekCharts);
 						var myConfig = {
 							type: "pie", 
@@ -975,13 +975,14 @@ function getComparitiveInformation(st,en,st1,en1,st2,last){
 						});
 						createChartforComparison("date1a","date1b",cs[0]); createChartforComparison("date2a","date2b",cs[1]); createChartforComparison("date3a","date3b",cs[2]); createChartforComparison("date4a","date4b",cs[3]);
 						createChartforComparison("date5a","date5b",cs[4]); createChartforComparison("date6a","date6b",cs[7]); createChartforComparison("date7a","date7b",cs[8]);
-						var divWeekCharts ="<div id='' style='float:left;width: 237px;'><h5 title="+cs[0].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[1].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[2].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[3].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[4].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[7].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div> <div id='' style='margin-left: -8px;float:left;width: 237px;'><h5 title="+cs[8].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div>";
+						var divWeekCharts ="<table style='width:100%;'><tr><td><div id='' style='float:left;width: 237px;'><h5 title="+cs[0].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div></td><td><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[1].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div></td><td><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[2].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div></td><td><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[3].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div></td><td><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[4].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div></td><td><div id='' style='margin-left: -8px;float:left;width: 238px;'><h5 title="+cs[7].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div></td><td><div id='' style='margin-left: -8px;float:left;width: 237px;'><h5 title="+cs[8].split(":")[0]+" onclick='openDialog(this)' style='margin-left: 8px;text-align: center;cursor: pointer;border: 1px solid darkgrey;background-color: #BAB9C6;color: #3F5666;margin-top: 1px;font-weight: 200;'>View Comparitive Statistics</h5></div></td><td>";
 						$("#multiSlider").append(divWeekCharts);
 						var zingBrand = setInterval(function() {
 						//$('#compTrend-license-text')[0].style.display='none';
 						//$('#volumeTrend-license-text')[0].style.display='none';
 						//$('#qualTrend-license-text')[0].style.display='none';
 						//$('#dated-license-text')[0].style.display='none';
+						if($('#date1b-license-text')[0]){
 						$('#date1b-license-text')[0].style.display='none';
 						$('#date2b-license-text')[0].style.display='none';
 						$('#date3b-license-text')[0].style.display='none';
@@ -992,6 +993,7 @@ function getComparitiveInformation(st,en,st1,en1,st2,last){
 						$('#complChart-license-text')[0].style.display='none';
 						$('#QualityChart-license-text')[0].style.display='none';
 						$('#otdChart-license-text')[0].style.display='none';
+						}
 						//$('#forDashChart1-license-text')[0].style.display='none';
 
 							clearInterval(zingBrand);
@@ -1046,7 +1048,7 @@ function createChartforComparison(id1,id2,cs){
         "background-color":"none",
         "border-width":1,
         "border-color":"black",
-        "background-image":"PATTERN_DIAGONAL_BRICK"
+        "background-image":""//"PATTERN_DIAGONAL_BRICK"
       },
       "series":[
         {"values":[s,m,c]}
@@ -1055,7 +1057,7 @@ function createChartforComparison(id1,id2,cs){
   ]
 };
 
-zingchart.loadModules('patterns');
+//zingchart.loadModules('patterns');
 zingchart.render({ 
 	id : id1, 
 	data : myConfig, 
@@ -1093,7 +1095,7 @@ var myConfig1 = {
   ]
 };
 //"background-image":"PATTERN_SOLID_DIAMOND"//"background-image":"PATTERN_SHINGLE"//"background-image":"PATTERN_VERTICAL"
-zingchart.loadModules('patterns');
+//zingchart.loadModules('patterns');
 zingchart.render({ 
 	id : id2, 
 	data : myConfig1, 

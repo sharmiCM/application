@@ -20,7 +20,8 @@ class login extends CI_Model {
 		'EmployeeID' => $emp,
 		'lname' => $lastN,
 		'TeamName' => $team,
-		'fName' => $firstN
+		'fName' => $firstN,
+		'date' => date('Y-m-d')
 		);
 	}
 	

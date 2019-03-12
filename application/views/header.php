@@ -34,5 +34,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 <a href="<?php echo base_url(); ?>LoginRegister/logout">Logout</a>
+
  </head>
  

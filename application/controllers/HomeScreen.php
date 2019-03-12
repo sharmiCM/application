@@ -39,4 +39,12 @@ class HomeScreen extends CI_Controller {
 	{
 		$this->load->view('CapacityPlanner/Capacity_planner.php');//
 	}
+	public function approveRequest()
+	{
+		$this->load->view('ApproveRequest/responseApproval.php');//
+	}
+	public function forceSignout()
+	{
+		$this->load->view('ForceSignout/Force_Signout.php');//
+	}
 }

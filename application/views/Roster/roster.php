@@ -33,7 +33,7 @@ $(document).on('change','#shift-11',function(){
      var shift_h =$("#shift-11").val();
 	  $.ajax({
                 type:'POST',
-				URL:'roster_ajax.php',
+				URL:"<?php echo base_url();?>public/Reports/roster_ajax.php",
                 data:{'shift_h':shift_h},
                 success:function(data){
 				var nums=$("#shift_h1").val(data);

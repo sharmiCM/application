@@ -50,9 +50,9 @@ body {
 <table style="width:50%; line-height: 40;margin-left: 20%;margin-top: 5%;font-family: Futura,Trebuchet MS,Arial,sans-serif; box-shadow: 3px 4px grey; ">
 <tr>
 <td style="color: white; text-align:center; font-family: unset;background-color: grey;width: 60%;">
-<h2 align='center' style=" height: 30px; line-height:0px; background: transparent;" id='daySelected'></h2>
+<h2 align='center' style=" height: 80px; line-height:0px; background: transparent;" id='daySelected'></h2>
 <h1 style="font-size: 75px; line-height:0px;" id='dateSelected'>00</h1>
-<h5 style="height: 25px; line-height:0px;" id='puncRea'>Reason: - </h5>
+<h5 style="height: 25px; line-height:0px;    margin-top: 50px;" id='puncRea'>Reason: - </h5>
 <h5 style="height: 25px; line-height:0px;" id='puncPer'></h5>
 	<table align='center' style="background:transparent; line-height:30px;width: 98%; border-radius: 10px;" id="inoutCal">
 	<tr><th style="border: 0px;"></th><th style="border: 0px;text-align: -webkit-center;">Intime</th><th style=";border: 0px;text-align: -webkit-center;">Outtime</th><th style="border: 0px;text-align: -webkit-center;">Hours</th></tr>

@@ -19,8 +19,8 @@ class LoginRegister extends CI_Controller{
   $query = $this->login->validate();
   if($query=="Go to home page!") // if the user's credentials validated...
   {
-   //redirect('HomeScreen'); 
-   redirect('HomeScreen/capacityPlannerDash');
+   redirect('HomeScreen'); 
+   //redirect('HomeScreen/forceSignout');
   }
   else // incorrect username or password
   {

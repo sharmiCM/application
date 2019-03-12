@@ -8,12 +8,12 @@ error_reporting(0);
 	  
 	  <section id="main-content">
           <section class="wrapper" style="">
-		  <!--<script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript" ></script>
+		  <!--<script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript" ></script>-->
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript" ></script>
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js" type="text/javascript" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
-<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">-->
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
 <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
 
 <input type="hidden" class="base" value="<?php echo base_url(); ?>">

@@ -1,6 +1,6 @@
 <?PHP
 	//include('dbConfig.php');
-$con = mysqli_connect('localhost', 'root', 'ppisAdmin@123','new');
+$con = mysqli_connect('localhost', 'root', 'ppisAdmin@123','new');error_reporting(0);	
 //mysqli_select_db('new');
 	$startDate = $_POST['sdate'];
 	$endDate = $_POST['edate'];
