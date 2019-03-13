@@ -47,14 +47,14 @@ body {
 <h1 style="text-align:center; font-family:Futura,Trebuchet MS,Arial,sans-serif;color:white;"><b>Welcome</b></h1>
 <div class="centered2" id="myrandomtext" style="text-align:center; font-family:courier; color:white;font-size:46px; display:none;"> Plant your garden and decorate your own soul, instead of waiting for someone to bring you flowers </div>
 
-<table style="width:50%; line-height: 40;margin-left: 20%;margin-top: 5%;font-family: Futura,Trebuchet MS,Arial,sans-serif; box-shadow: 3px 4px grey; ">
+<table style="width:55%; line-height: 40;margin-left: 20%;margin-top: 5%;font-family: Futura,Trebuchet MS,Arial,sans-serif; box-shadow: 3px 4px grey; ">
 <tr>
 <td style="color: white; text-align:center; font-family: unset;background-color: grey;width: 60%;">
 <h2 align='center' style=" height: 80px; line-height:0px; background: transparent;" id='daySelected'></h2>
 <h1 style="font-size: 75px; line-height:0px;" id='dateSelected'>00</h1>
 <h5 style="height: 25px; line-height:0px;    margin-top: 50px;" id='puncRea'>Reason: - </h5>
 <h5 style="height: 25px; line-height:0px;" id='puncPer'></h5>
-	<table align='center' style="background:transparent; line-height:30px;width: 98%; border-radius: 10px;" id="inoutCal">
+	<table align='center' style="background:transparent; line-height:30px;width: 98%; border-radius: 10px;color: white; font-size: small;" id="inoutCal">
 	<tr><th style="border: 0px;"></th><th style="border: 0px;text-align: -webkit-center;">Intime</th><th style=";border: 0px;text-align: -webkit-center;">Outtime</th><th style="border: 0px;text-align: -webkit-center;">Hours</th></tr>
 	<tr><th style="border: 0px;border-right: 1px solid white;">Scheduled</th><th id='shedI' style="border: 0px;border-right: 1px solid white;text-align: -webkit-center;">Intime</th><th id='shedO' style="border: 0px;border-right: 1px solid white;text-align: -webkit-center;">Outtime</th><th style="border: 0px;text-align: -webkit-center;">9.00</th></tr>
 	<tr><th style="border: 0px;border-right: 1px solid white;">Actual</th><th id='actI' style="border: 0px;border-right: 1px solid white;text-align: -webkit-center;">Intime</th><th id='actO' style="border: 0px;border-right: 1px solid white;text-align: -webkit-center;">Outtime</th><th id='hrsPres' style="border: 0px;text-align: -webkit-center;">Hours</th></tr>
@@ -323,5 +323,11 @@ var totalDays =0;var totalLateDays =0; var dateSelectedVal;
 
           </section>
           </section>
+		  </div>
+
+  </main>
+</div>
+
 </body>
+
 </html>

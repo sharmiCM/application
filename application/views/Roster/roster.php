@@ -324,6 +324,7 @@ $total1=count($arraycoun);
 </div>
       </section>
           </section>
+</main>
+</div>
 </body>
 </html>
-
