@@ -5,40 +5,33 @@ class LoginRegister extends CI_Controller{
  function __construct()
   {
    parent::__construct();
-    $this->load->helper(array('url'));
-	$this->load->model('login'); /* load model default which you create */
-    $this->load->library('session');
+    $this->load->helper(array('form', 'url'));
   }
- function index()
+ function index($msg = NULL)
  {
-  $this->load->view('login_form'); 
+  $data['msg'] = $msg;
+  $data['main_content'] = 'login_form';
+  $this->load->view('includes/template', $data); 
  } 
- function validateCredentials() {  
-//if (isset($this->session->userdata['user'])){
-  $this->load->model('login'); 
-  $query = $this->login->validate();
+ function validate_credentials() {  
+ 
+  $this->load->model('membership_model'); 
+  $query = $this->membership_model->validate();
   if($query=="Go to home page!") // if the user's credentials validated...
   {
-   redirect('HomeScreen'); 
-   //redirect('HomeScreen/forceSignout');
+   $data = array(
+    'EmployeeID' => $this->input->post('EmployeeID'),
+    'is_logged_in' => true
+   );
+   $this->session->set_userdata($data);
+   redirect('/Dashboard/Dashboard');
   }
   else // incorrect username or password
   {
-    $msg = '<p class=error>'.$query.'</p>';
-	$data = array('messages' => $msg);
-	$this->session->set_userdata($data);
-    $this->load->view('login_form');
-	$this->session->unset_userdata('messages');
-   //$this->index();
+   $msg = '<p class=error>'.$query.'</p>';
+            $this->index($msg);
   }
-//}
-//else{
-//	 $this->index();
-//}
- }
-  function logout() {
-  $this->session->sess_destroy();
-  $this->load->view('login_form');
+
  }
   function signup()
  {
@@ -52,7 +45,7 @@ class LoginRegister extends CI_Controller{
  }
  function create_member()
  {
-  $this->load->library('session');
+  $this->load->library('form_validation');
 
   
   // field name, error message, validation rules
@@ -69,9 +62,9 @@ class LoginRegister extends CI_Controller{
   }
   else
   {   
-   $this->load->model('login');
+   $this->load->model('membership_model');
     
-   if($query = $this->login->create_member())
+   if($query = $this->membership_model->create_member())
    {
     $data['main_content'] = 'signup_successful';
     $this->load->view('includes/template', $data);
@@ -83,5 +76,11 @@ class LoginRegister extends CI_Controller{
   }
  
    
+ }
+  function logout()
+ {
+  $this->session->sess_destroy();
+  $data['main_content'] = 'login_form';
+  $this->load->view('includes/template', $data); 
  }
 }

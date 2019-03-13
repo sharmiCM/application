@@ -8,7 +8,7 @@
 width: auto;
 height: 200px;
 z-index: 15;
-top: 35%;
+top: 45%;
 left: 45%;
 margin: -100px 0 0 -150px;
 }
@@ -19,23 +19,21 @@ h2,h3,h4,h5 {
  text-align: center;
 }
 h1{
-	font-family:monospace;
-	font-size:40px;
-	color:#000;
+	font-family:Sans-serif;
+	font-size:30px;color:#000;
 }
 input[type=text], input[type=password] {
  display: block;
- color:white;
  margin: 0 0 1em 0;
  width: 100%;
  border: 5px;
  -moz-border-radius: 1px;
  -webkit-border-radius: 1px;
  padding: 1em;
- border-bottom: 1px solid #CCCCCC;
+ border: 1px solid #CCCCCC;
 }
 input[type=submit] {
- border:1px outset #ccc;padding:5px 2px 4px;color:#fff;text-align: center;cursor:pointer;background:dimgrey;width:50%;height: 35px;border-radius: 4px;
+ border:1px outset #ccc;padding:5px 2px 4px;color:#fff;min-width: 100px;text-align: center;cursor:pointer;background:dimgrey;width:100%;
 }
 input[type=submit]:hover {
 background: dimgrey;
